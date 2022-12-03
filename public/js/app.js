@@ -1,5 +1,4 @@
 //document.getElementById('heading').innerText = 'Client'
-console.log("I am client side js");
 
 /*fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then(data =>{
@@ -11,9 +10,9 @@ const searchText = document.querySelector("input");
 const paraOne = document.querySelector("#paraResultOne");
 const paraTwo = document.querySelector("#paraResultTwo");
 weatherForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault()
 
-  const address = searchText.value
+  const address = searchText.value 
   paraOne.textContent = "Loading"
   paraTwo.textContent = ""
   if (address != "") {
