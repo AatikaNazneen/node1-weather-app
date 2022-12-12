@@ -29,7 +29,7 @@ app.get('',(req,res) => {
 
 app.get('/about',(req,res) => {
     //res.render for handlebars
-    res.render( 'about', { title: 'About', content: 'About me', name:'Aatika'})
+    res.render( 'about', { title: 'About', name:'Aatika'})
 }) 
 app.get('/help',(req,res) => {
     //res.render for handlebars
