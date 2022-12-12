@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 //const cors = require('cors')
+const port = process.env.PORT || 3000
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
@@ -20,7 +21,7 @@ hbs.registerPartials(partialsPath)
 
 //set up static directory to serve
 app.use(express.static(publicDirPath))
-//app.use(cors())
+//;app.use(cors())
 app.get('',(req,res) => {
     //res.render for handlebars
     res.render( 'index', { title: 'Weather app', name: 'Aatika'})
@@ -64,8 +65,8 @@ app.get('/help/*', (req,res) =>{
 app.get('*', (req, res) => {
     res.render('404', {title:"Error" , errorText:'Page not found', name:'aatika'})
 })
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
 
 /*

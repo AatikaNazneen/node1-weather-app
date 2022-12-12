@@ -17,7 +17,7 @@ weatherForm.addEventListener("submit", (e) => {
   paraTwo.textContent = ""
   if (address != "") {
     fetch(
-      "http://localhost:3000/weather?address=" + encodeURIComponent(address)
+      "/weather?address=" + encodeURIComponent(address)
     ).then((response) => {
       response.json().then((data) => {
         if (data.error) {
